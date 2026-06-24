@@ -25,11 +25,6 @@
             layers = <4>;
             timeout-ms = <200>;
         };
-
-        to_game_2 {
-            bindings = <&to 4>;
-            key-positions = <0 11>;
-        };
     };
 
     keymap {
