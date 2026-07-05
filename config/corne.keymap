@@ -86,6 +86,8 @@
 &trans  &trans  &trans     &msc SCRL_DOWN  &trans     &trans    &trans          &trans          &trans        &trans           &trans  &trans
                            &trans          &trans     &trans    &trans          &trans          &trans
             >;
+
+            label = "Mouse";
         };
     };
 
