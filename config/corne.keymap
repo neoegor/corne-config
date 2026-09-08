@@ -3,15 +3,14 @@
  *
  * SPDX-License-Identifier: MIT
  */
+// Mouse values
+
+#define ZMK_POINTING_DEFAULT_MOVE_VAL 1200
+#define ZMK_POINTING_DEFAULT_SCRL_VAL 25
 
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
-
-// Mouse values
-#define ZMK_POINTING_DEFAULT_MOVE_VAL 1200
-#define ZMK_POINTING_DEFAULT_SCRL_VAL 25
-
 #include <dt-bindings/zmk/pointing.h>
 
 / {
@@ -27,7 +26,13 @@
         normal {
             bindings = <&to 0>;
             key-positions = <0 11>;
-            layers = <4>;
+            layers = <4 5>;
+        };
+
+        game {
+            bindings = <&to 5>;
+            key-positions = <12 23>;
+            layers = <0>;
         };
     };
 
@@ -93,6 +98,16 @@
             >;
 
             label = "Mouse";
+        };
+
+        layer_5 {
+            label = "GAME";
+            bindings = <
+&kp TAB       &kp Q  &kp W  &kp E     &kp R      &kp T                   &kp Y  &kp U  &kp I              &kp O    &kp P          &kp SQT
+&kp ESCAPE    &kp A  &kp S  &kp D     &kp F      &kp G                   &kp H  &kp J  &kp K              &kp L    &kp SEMICOLON  &kp BACKSPACE
+&kp LEFT_ALT  &kp Z  &kp X  &kp C     &kp V      &kp B                   &kp N  &kp M  &kp COMMA          &kp DOT  &kp FSLH       &kp RIGHT_SHIFT
+                            &kp LGUI  &kp SPACE  &mt LEFT_SHIFT ENTER    &mo 2  &mo 1  &kp RIGHT_CONTROL
+            >;
         };
     };
 
